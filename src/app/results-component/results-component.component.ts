@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-results-component',
   templateUrl: './results-component.component.html',
-  styleUrls: ['./results-component.component.css']
 })
-export class ResultsComponentComponent implements OnInit {
+export class ResultsComponentComponent {
+  a = 5;
+  b = 5;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  numbersSum(a: number, b: number): number {
+    return a + b;
   }
 
+  numbersDif(a: number, b: number): number {
+    return a - b;
+  }
+
+  numbersMultiply(a: number, b: number): number {
+    return a * b;
+  }
+
+  numbersDivide(a: number, b: number): number {
+    return a / b;
+  }
 }
