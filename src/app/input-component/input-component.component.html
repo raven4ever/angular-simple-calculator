@@ -1,14 +1,16 @@
 <div class="container">
   <div class="row justify-content-center">
     <label>a=</label>
-    <input type="text"
+    <input (ngModelChange)="firstNumberChanged($event)"
+           [(ngModel)]="firstNumber"
            size="3"
-           [(ngModel)]="firstNumber"/>
+           type="text"/>
   </div>
   <div class="row justify-content-center">
     <label>b=</label>
-    <input type="text"
+    <input (ngModelChange)="secondNumberChanged($event)"
+           [(ngModel)]="secondNumber"
            size="3"
-           [(ngModel)]="secondNumber"/>
+           type="text"/>
   </div>
 </div>
