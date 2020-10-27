@@ -22,8 +22,13 @@
 
     <label class="col-form-label" for="adivb">A / B = </label>
     <div class="row-cols-1">
-      <input [value]="numbersDivide(a, b)" class="form-control-plaintext"
+      <input [value]="numbersDivide(a, b)"
+             *ngIf="b!=0; else notShowB"
+             class="form-control-plaintext"
              id="adivb" readonly type="text">
+      <ng-template #notShowB>
+        <p class="form-control-plaintext">Divide by 0!</p>
+      </ng-template>
     </div>
   </div>
 
@@ -36,8 +41,13 @@
 
     <label class="col-form-label" for="bdiva">B / A = </label>
     <div class="row-cols-1">
-      <input [value]="numbersDivide(b, a)" class="form-control-plaintext"
+      <input [value]="numbersDivide(b, a)"
+             *ngIf="a!=0; else notShowA"
+             class="form-control-plaintext"
              id="bdiva" readonly type="text">
+      <ng-template #notShowA>
+        <p class="form-control-plaintext">Divide by 0!</p>
+      </ng-template>
     </div>
   </div>
 </div>
