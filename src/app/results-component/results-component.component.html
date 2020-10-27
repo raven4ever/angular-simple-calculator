@@ -1,28 +1,43 @@
-<div class="container justify-content-center">
-  <div class="row">
-    <div class="col-10">
-      <p>a+b = {{ numbersSum(a, b) }}</p>
+<div class="form-group">
+  <div class="form-row">
+    <label class="col-form-label" for="aplusb">A + B = </label>
+    <div class="row-cols-1">
+      <input [value]="numbersSum(a,b)" class="form-control-plaintext"
+             id="aplusb" readonly type="text">
     </div>
-    <div class="col-10">
-      <p>a*b = {{ numbersMultiply(a, b) }}</p>
+
+    <label class="col-form-label" for="atimesb">A * B = </label>
+    <div class="row-cols-1">
+      <input [value]="numbersMultiply(a, b)" class="form-control-plaintext"
+             id="atimesb" readonly type="text">
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-10">
-      <p>a-b = {{ numbersDif(a, b) }}</p>
+  <div class="form-row">
+    <label class="col-form-label" for="aminusb">A - B = </label>
+    <div class="row-cols-1">
+      <input [value]="numbersDif(a, b)" class="form-control-plaintext"
+             id="aminusb" readonly type="text">
     </div>
-    <div class="col-10">
-      <p>a/b = {{ numbersDivide(a, b) }}</p>
+
+    <label class="col-form-label" for="adivb">A / B = </label>
+    <div class="row-cols-1">
+      <input [value]="numbersDivide(a, b)" class="form-control-plaintext"
+             id="adivb" readonly type="text">
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-10">
-      <p>b-a = {{ numbersDif(b, a) }}</p>
+  <div class="form-row">
+    <label class="col-form-label" for="bminusa">B - A = </label>
+    <div class="row-cols-1">
+      <input [value]="numbersDif(b, a)" class="form-control-plaintext"
+             id="bminusa" readonly type="text">
     </div>
-    <div class="col-10">
-      <p>b/a = {{ numbersDivide(b, a) }}</p>
+
+    <label class="col-form-label" for="bdiva">B / A = </label>
+    <div class="row-cols-1">
+      <input [value]="numbersDivide(b, a)" class="form-control-plaintext"
+             id="bdiva" readonly type="text">
     </div>
   </div>
 </div>
